@@ -7,3 +7,9 @@ The vendored theme is Stack `v3.34.2`, which is compatible with Hugo `0.143.1 ex
 ```sh
 hugo server -p 1314
 ```
+
+## Encrypt Case
+
+![partial](image.png)
+
+![all content](image-1.png)
