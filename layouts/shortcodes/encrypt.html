@@ -6,7 +6,7 @@
 {{- if (.Page.Params.password | default "") -}}
 {{ .Page.RenderString .Inner }}
 {{- else -}}
-<template data-hugo-encrypt-start>{{ dict "password" $password "prompt" $prompt "kind" "partial" | jsonify }}</template>
+<template data-hugo-encrypt-start>{{ dict "password" $password "prompt" $prompt | jsonify }}</template>
 {{ .Page.RenderString .Inner }}
 <template data-hugo-encrypt-end></template>
 {{- end -}}
