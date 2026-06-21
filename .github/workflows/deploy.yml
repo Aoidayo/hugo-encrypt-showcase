@@ -37,10 +37,10 @@ jobs:
         run: npm install -g github:aoidayo/hugo-blog-encrypt
 
       - name: hugo-blog-encrypt install
-        run: hugo-blog-encrypt install
+        run: npx hugo-blog-encrypt install
 
       - name: Build and encrypt
-        run: hugo-blog-encrypt build
+        run: npx hugo-blog-encrypt build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
