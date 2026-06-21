@@ -119,6 +119,9 @@ jobs:
         run: |
           hugo-blog-encrypt \
             --public public
+          find public -name '*.html' -print0 | xargs -0 sed -i \
+            -e 's#href="/css/hugo-blog-encrypt.css"#href="${{ steps.pages.outputs.base_url }}/css/hugo-blog-encrypt.css"#g' \
+            -e 's#src="/js/hugo-blog-encrypt.js"#src="${{ steps.pages.outputs.base_url }}/js/hugo-blog-encrypt.js"#g'
 
       - name: Cache save
         id: cache-save
