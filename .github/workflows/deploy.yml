@@ -33,14 +33,21 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Checkout hugo-blog-encrypt
+        uses: actions/checkout@v4
+        with:
+          repository: aoidayo/hugo-blog-encrypt
+          path: hugo-blog-encrypt
+
       - name: Install hugo-blog-encrypt
-        run: npm install -g github:aoidayo/hugo-blog-encrypt
+        working-directory: hugo-blog-encrypt
+        run: npm install -g .
 
       - name: hugo-blog-encrypt install
-        run: npx hugo-blog-encrypt install
+        run: hugo-blog-encrypt install
 
       - name: Build and encrypt
-        run: npx hugo-blog-encrypt build
+        run: hugo-blog-encrypt build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
