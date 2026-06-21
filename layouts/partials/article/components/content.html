@@ -1,0 +1,7 @@
+<section class="article-content">
+    <!-- Refer to https://discourse.gohugo.io/t/responsive-tables-in-markdown/10639/5 -->
+    {{ $wrappedTable := printf "<div class=\"table-wrapper\">${1}</div>" }}
+    {{ partial "hugo-blog-encrypt/content-start.html" . }}
+    {{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | safeHTML }}
+    {{ partial "hugo-blog-encrypt/content-end.html" . }}
+</section>

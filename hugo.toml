@@ -1,13 +1,10 @@
 baseURL = "http://localhost:1313/"
 languageCode = "zh-cn"
 title = "Hugo Encrypt Showcase"
+theme = "hugo-theme-stack"
 
 [pagination]
 pagerSize = 5
-
-[module]
-[[module.imports]]
-path = "github.com/CaiJimmy/hugo-theme-stack/v3"
 
 [params]
 mainSections = ["post"]
@@ -44,15 +41,6 @@ enabled = false
 provider = "disqus"
 
 [[params.widgets.homepage]]
-type = "search"
-
-[[params.widgets.homepage]]
-type = "archives"
-
-[params.widgets.homepage.params]
-limit = 5
-
-[[params.widgets.homepage]]
 type = "tag-cloud"
 
 [params.widgets.homepage.params]
@@ -66,15 +54,3 @@ identifier = "home"
 name = "Home"
 url = "/"
 weight = 10
-
-[[menu.main]]
-identifier = "archives"
-name = "Archives"
-url = "/archives/"
-weight = 20
-
-[[menu.main]]
-identifier = "search"
-name = "Search"
-url = "/search/"
-weight = 30
