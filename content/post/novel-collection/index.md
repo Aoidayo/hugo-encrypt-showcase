@@ -6,7 +6,7 @@ tags:
   - hugo
   - stack
 password: "1234"
-prompt: "请输入密码喵😊"
+prompt: "请输入密码喵😊？密码是1234。"
 ---
 
 
