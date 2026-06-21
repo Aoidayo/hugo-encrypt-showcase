@@ -117,8 +117,7 @@ jobs:
 
       - name: Encrypt the site
         run: |
-          hugo-blog-encrypt \
-            --public public
+          hugo-blog-encrypt build
 
       - name: Cache save
         id: cache-save
